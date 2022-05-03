@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentWelcom">
+    <fragment
+        android:id="@+id/fragmentWelcom"
+        android:name="com.example.crocsapp.fragment.FragmentWelcom"
+        android:label="fragment_welcom"
+        tools:layout="@layout/fragment_welcom" >
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_fragmentWelcom_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.crocsapp.fragment.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNews"
+        android:name="com.example.crocsapp.fragment.FragmentNews"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLike"
+        android:name="com.example.crocsapp.fragment.FragmentLike"
+        android:label="fragment_like"
+        tools:layout="@layout/fragment_like" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentItem"
+        android:name="com.example.crocsapp.fragment.FragmentItem"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+
+        <action
+            android:id="@+id/action_fragmentItem_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentItem_to_fragmentCart"
+            app:destination="@id/fragmentCart" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.crocsapp.fragment.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentItem"
+            app:destination="@id/fragmentItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCart"
+        android:name="com.example.crocsapp.fragment.FragmentCart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+
+        <action
+            android:id="@+id/action_fragmentCart_to_fragmentItem"
+            app:destination="@id/fragmentItem" />
+    </fragment>
+</navigation>
