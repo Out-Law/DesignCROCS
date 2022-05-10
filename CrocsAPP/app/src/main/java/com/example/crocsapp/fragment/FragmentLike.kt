@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.crocsapp.Adapter.AdapterGrid
@@ -41,6 +42,8 @@ class FragmentLike : Fragment() {
                 ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic__5),
                 ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic__5)
             )
-        )
+        ){
+            findNavController().navigate(R.id.action_fragmentLike_to_fragmentItem   )
+        }
     }
 }

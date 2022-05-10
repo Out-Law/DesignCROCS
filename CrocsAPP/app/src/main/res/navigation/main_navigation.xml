@@ -36,19 +36,25 @@
         android:label="fragment_like"
         tools:layout="@layout/fragment_like" >
 
+        <action
+            android:id="@+id/action_fragmentLike_to_fragmentItem"
+            app:destination="@id/fragmentItem" />
     </fragment>
     <fragment
         android:id="@+id/fragmentItem"
         android:name="com.example.crocsapp.fragment.FragmentItem"
         android:label="fragment_item"
         tools:layout="@layout/fragment_item" >
-
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="false" />
         <action
             android:id="@+id/action_fragmentItem_to_fragmentHome"
             app:destination="@id/fragmentHome" />
         <action
-            android:id="@+id/action_fragmentItem_to_fragmentCart"
-            app:destination="@id/fragmentCart" />
+            android:id="@+id/action_fragmentItem_to_fragmentLike"
+            app:destination="@id/fragmentLike" />
+
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
@@ -66,8 +72,5 @@
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" >
 
-        <action
-            android:id="@+id/action_fragmentCart_to_fragmentItem"
-            app:destination="@id/fragmentItem" />
     </fragment>
 </navigation>

@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.crocsapp.Adapter.DataItem.ItemGridCard
 import com.example.crocsapp.R
 
-class AdapterGrid (private var dataList: List<ItemGridCard>)
+class AdapterGrid (
+    private var dataList: List<ItemGridCard>,
+    private val onItemClick: () -> Unit
+)
     : RecyclerView.Adapter<AdapterGrid.ViewHolder>(){
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -30,6 +33,10 @@ class AdapterGrid (private var dataList: List<ItemGridCard>)
         holder.title.text = data.title
         holder.img.setImageResource(data.img)
         holder.icon.setImageResource(data.icon)
+
+        holder.itemView.setOnClickListener {
+            onItemClick()
+        }
     }
 
     override fun getItemCount(): Int = dataList.size
