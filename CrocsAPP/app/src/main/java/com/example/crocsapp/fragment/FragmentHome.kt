@@ -16,9 +16,6 @@ import com.example.crocsapp.R
 
 class FragmentHome: Fragment() {
 
-    private lateinit var  adapterGrid: AdapterGrid
-    private var dataList = mutableListOf<ItemGridCard>()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,16 +33,16 @@ class FragmentHome: Fragment() {
 
         recyclerHome.adapter = AdapterGrid(
             listOf(
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1),
-                ItemGridCard("Title",R.drawable.crocs1)
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union),
+                ItemGridCard("Title",R.drawable.crocs1, R.drawable.ic_union)
             )
         )
     }

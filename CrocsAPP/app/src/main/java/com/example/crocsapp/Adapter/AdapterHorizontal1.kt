@@ -10,26 +10,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.crocsapp.Adapter.DataItem.ItemGridCard
 import com.example.crocsapp.R
 
-class AdapterGrid (private var dataList: List<ItemGridCard>)
-    : RecyclerView.Adapter<AdapterGrid.ViewHolder>(){
+class AdapterHorizontal1(private var dataList: List<Int>)
+    : RecyclerView.Adapter<AdapterHorizontal1.ViewHolder>() {
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var title: TextView = itemView.findViewById(R.id.title)
-        var img: ImageView = itemView.findViewById(R.id.img)
-        var icon: ImageButton = itemView.findViewById(R.id.imageBLike)
+        var img: ImageView = itemView.findViewById(R.id.imageView2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_card_home, parent, false)
-        return ViewHolder(view)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_new, parent, false)
+        return AdapterHorizontal1.ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var data = dataList[position]
-
-        holder.title.text = data.title
-        holder.img.setImageResource(data.img)
-        holder.icon.setImageResource(data.icon)
+        holder.img.setImageResource(dataList[position])
     }
 
     override fun getItemCount(): Int = dataList.size
