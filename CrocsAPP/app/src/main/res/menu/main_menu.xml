@@ -3,31 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/fragmentHome"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_vector4"
         android:title="-"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/fragmentCart"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic__5"
         android:title="-"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/fragmentNews"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_group_2"
         android:title="-"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/fragmentLike"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_vector_1"
         android:title="-"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/fragmentProfile"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_group_1"
         android:title="-"
         app:showAsAction="always" />
 

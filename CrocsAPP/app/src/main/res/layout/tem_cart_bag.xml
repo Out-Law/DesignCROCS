@@ -25,5 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="155dp"
             app:srcCompat="@drawable/img" />
+
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
